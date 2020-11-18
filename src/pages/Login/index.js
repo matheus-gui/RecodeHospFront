@@ -7,31 +7,29 @@ const Login = () => {
             <Form style={{width:"50%", marginLeft:"25%", marginTop:"10%", border:"1px solid", borderRadius:"10px", boxShadow: "5px" ,padding:"15px"}}>
                 
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Name:</Form.Label>
-                    <Form.Control type="text" placeholder="Enter your name" />
+                    <Form.Label>Nome</Form.Label>
+                    <Form.Control type="text" placeholder="Digite o seu nome" />
                    
                 </Form.Group>
 
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Label>CRM:</Form.Label>
-                    <Form.Control type="number" placeholder="Enter your CRM" />
+                    <Form.Label>Código</Form.Label>
+                    <Form.Control type="number" placeholder="Digite o seu código." />
                 </Form.Group>
                 
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
-                    <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                    </Form.Text>
+                    <Form.Label>E-mail</Form.Label>
+                    <Form.Control type="email" placeholder="Digite o seu e-mail corporativo." />
+                   
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Label>Senha</Form.Label>
+                    <Form.Control type="password" placeholder="Digite a sua senha." />
                 </Form.Group>
                
                 <Button style={{backgroundColor:"#86b2f3", border:"none"}} type="submit">
-                    SignUp
+                    Login
                 </Button>
             </Form>
         </div>
