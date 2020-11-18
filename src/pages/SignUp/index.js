@@ -1,15 +1,14 @@
 import React from 'react'
 import {Form, Button} from 'react-bootstrap';
-import Page from '../../components/Page';
-import {Link} from 'react-router-dom';
+import Page from '../../components/Page'
 
-const Login = () => {
+const SignUp = () => {
     return (
         <Page>
             <Form 
             style={{
-            width:"20%", 
-            marginLeft:"40vw", 
+            width:"50%", 
+            marginLeft:"25%", 
             marginTop:"10%", 
             border:"1px solid blue", 
             borderRadius:"10px", 
@@ -17,7 +16,16 @@ const Login = () => {
             padding:"15px",
             backgroundColor:"white"}}>
                 
-               
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Label>Nome</Form.Label>
+                    <Form.Control type="text" placeholder="Digite o seu nome" />
+                   
+                </Form.Group>
+
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Label>CRM</Form.Label>
+                    <Form.Control type="number" placeholder="Digite aqui seu CRM:" />
+                </Form.Group>
                 
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>E-mail</Form.Label>
@@ -29,10 +37,6 @@ const Login = () => {
                     <Form.Label>Senha</Form.Label>
                     <Form.Control type="password" placeholder="Digite a sua senha." />
                 </Form.Group>
-
-                <Form.Group>
-                    <Link to="/signup">Cadastre-se</Link>
-                </Form.Group>
                
                 <Button style={{backgroundColor:"#86b2f3", border:"none"}} type="submit">
                     Login
@@ -42,4 +46,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default SignUp;
