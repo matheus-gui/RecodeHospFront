@@ -9,18 +9,27 @@ const Navegador = (props) => {
 
   return (
     <div>
-      <Navbar id="navbar" color="primary" dark>
-        <NavbarBrand href="/" className="mr-auto">Hospital ReCode</NavbarBrand>
+      <Navbar id="navbar" style={{color:"white"}} dark>
+        <NavbarBrand 
+          href="/" 
+          className="mr-auto" 
+          style={{color:"blue", fontFamily:"segoe", fontWeight:"bold", fontSize:"30px"}}>
+
+          HOSPITAL <p style={{padding:"0px", marginBottom:"0px"}}>RECODE</p>
+        </NavbarBrand>
+        
         <NavbarToggler onClick={toggleNavbar} className="mr-3" />
+        
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             {routes.map((route, index) => {
               if (route.navbar) {
                 return <NavItem key={index}>
-                  <NavLink href={route.path}>{route.name}</NavLink>
-                  </NavItem>
+                          <NavLink href={route.path}>{route.name}</NavLink>
+                        </NavItem>
               };
             })}
+
           </Nav>
         </Collapse>
       </Navbar>
