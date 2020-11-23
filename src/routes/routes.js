@@ -2,6 +2,7 @@ import Sobre from '../pages/Sobre';
 import Login from '../pages/Login';
 import Home from '../pages/Home';
 import SignUp from '../pages/SignUp';
+import Administrativo from '../pages/Administrativo';
 
 const routes = [{
     name: 'Sobre',
@@ -25,6 +26,12 @@ const routes = [{
     name: 'SignUp',
     component: SignUp,
     path: '/signup',
+    navbar: false,
+},
+{
+    name: 'Administrativo',
+    component: Administrativo,
+    path: '/administrativo',
     navbar: false,
 }
 ];
