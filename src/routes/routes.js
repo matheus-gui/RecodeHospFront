@@ -5,6 +5,7 @@ import SignUp from '../pages/SignUp';
 import Administrativo from '../pages/Administrativo';
 import Recepcao from '../pages/Recepcao';
 import Internacao from '../pages/Internacao';
+import Admin from '../pages/Admin';
 
 const routes = [{
     name: 'Sobre',
@@ -31,9 +32,9 @@ const routes = [{
     navbar: false,
 },
 {
-    name: 'Administrativo',
-    component: Administrativo,
-    path: '/administrativo',
+    name: 'Admin',
+    component: Admin,
+    path: '/admin',
     navbar: false,
 },
 {
