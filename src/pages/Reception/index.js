@@ -2,7 +2,7 @@ import React from 'react'
 import Page from '../../components/Page'
 import {Modal, Button} from 'react-bootstrap';
 
-const Administrativo = () => {
+const Reception = () => {
     return (
         <Page>
             <Modal.Dialog>
@@ -11,9 +11,8 @@ const Administrativo = () => {
                 </Modal.Header>
 
                 <Modal.Body>
-                    <p><Button variant="primary" style={{width:'100%'}}>UNIDADE</Button></p>
-                    <p><Button variant="primary" style={{width:'100%'}}>LEITO</Button></p>
-                    <p><Button variant="primary" style={{width:'100%'}}>CADASTRO</Button></p>
+                    <p><Button variant="primary" style={{width:'100%'}}>Cadastrar Paciente</Button></p>
+                    <p><Button variant="primary" style={{width:'100%'}}>Transferir Leito</Button></p>
                 </Modal.Body>
 
                 <Modal.Footer>
@@ -25,4 +24,4 @@ const Administrativo = () => {
     )
 }
 
-export default Administrativo;
+export default Reception;
