@@ -5,8 +5,7 @@ import Page from '../../components/Page';
 import {Link} from 'react-router-dom';
 
 
-
-export default function Login () {
+export default function Login (props) {
 
     const [form, setForm] = useState({
         email:'',
@@ -16,8 +15,8 @@ export default function Login () {
     
     const onSubmit = () => {
         if (form.email === "admin@hosprecode.com.br" && form.password === "admin") {
-            window.location.href =  "/recepcao";
-        } else{
+            props.history.push("/recepcao")
+        } else {
             alert('Senha incorreta!');
         }   
     }
@@ -46,16 +45,16 @@ export default function Login () {
                   <Modal.Body>  
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>E-mail</Form.Label>
-                        <Input type="email" value={form.user} 
+                        <Input type="email" value={form.email} 
                         placeholder="Digite o seu e-mail corporativo." 
-                        onChange = {onChange} name ="email" />
+                        onChange = {onChange} name = "email" />
                     
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Senha</Form.Label>
                         <Input type="password" value={form.password} placeholder="Digite a sua senha." 
-                        onChange = {onChange} name ="password" />
+                        onChange = {onChange} name = "password" />
                     </Form.Group>
 
                 </Modal.Body>
