@@ -12,7 +12,10 @@ const Transferencia = () => {
     console.log("show");
     //se clicar no botão, modal aparece
     setDropdown("show");
-    document.body.addEventListener("click", closeDropdown);
+    setTimeout(() => {
+        document.body.addEventListener("click", closeDropdown);
+    });
+    
   }
 
   const closeDropdown = event => {
@@ -29,6 +32,7 @@ const Transferencia = () => {
         
 
         <Page >
+            
             <Card style={{width:'50%', marginLeft:"25%"}}>
                 <Card.Header>PACIENTES INTERNADOS:</Card.Header>
                 <Card.Body>
@@ -44,6 +48,7 @@ const Transferencia = () => {
                     </Form>
                 </Card.Body>
                 <Card.Body>
+                    <ModalTransferencia className={dropdown} modalRef={modalRef}/>
                     <ListGroup defaultActiveKey="#link1">
                         <ListGroup.Item action onClick={toggleDropdown}>
                             This one is a button
@@ -54,7 +59,7 @@ const Transferencia = () => {
                         <ListGroup.Item action onClick={toggleDropdown}>
                             This one is a button
                         </ListGroup.Item>
-                        <ModalTransferencia className={dropdown} />
+                        
                     </ListGroup>
                 </Card.Body>
                 <Card.Footer><Button variant="danger" style={{float:"right"}}>Voltar</Button></Card.Footer>
