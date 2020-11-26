@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from '../../components/Page';
-import {ListGroup, Card, Form} from 'react-bootstrap';
+import {ListGroup, Card, Form, Button} from 'react-bootstrap';
 
 function alertClicked() {
   alert('You clicked the third ListGroupItem');
@@ -36,6 +36,7 @@ export default function index() {
                         </ListGroup.Item>
                     </ListGroup>
                 </Card.Body>
+                <Card.Footer><Button variant="danger" style={{float:"right"}}>Voltar</Button></Card.Footer>
             </Card>
             
         </Page>
