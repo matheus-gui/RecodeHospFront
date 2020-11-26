@@ -2,7 +2,6 @@ import Sobre from '../pages/Sobre';
 import Login from '../pages/Login';
 import Home from '../pages/Home';
 import SignUp from '../pages/SignUp';
-import Administrativo from '../pages/Administrativo';
 import Recepcao from '../pages/Recepcao';
 import Internacao from '../pages/Internacao';
 import Admin from '../pages/Admin';
