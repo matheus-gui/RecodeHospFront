@@ -5,7 +5,8 @@ import SignUp from '../pages/SignUp';
 import Recepcao from '../pages/Recepcao';
 import Internacao from '../pages/Internacao';
 import Admin from '../pages/Admin';
-import Transferencia from '../pages/Transferencia';
+import Transferencia from '../pages/Transferencia/Transferencia';
+import ModalTransferencia from '../pages/ModalTransferencia';
 
 const routes = [{
     name: 'Sobre',
@@ -53,6 +54,12 @@ const routes = [{
     name: 'Transferencia',
     component: Transferencia,
     path: '/transferencia',
+    navbar: false,
+},
+{
+    name: 'ModalTransferencia',
+    component: ModalTransferencia,
+    path: '/modaltransferencia',
     navbar: false,
 }
 ];

@@ -1,43 +1,59 @@
 import React from 'react'
-import {Form, Button, Modal} from 'react-bootstrap';
-import Page from '../../components/Page';
-import {Link} from 'react-router-dom';
+import {Form, Button, Modal, Card, ListGroupItem, ListGroup} from 'react-bootstrap';
 
-const ModalTransferencia = () => {
+
+const ModalTransferencia = props => {
+    
+    const { className, modalRef } = props;
+    
     return (
-        <Page>
-            <Modal.Dialog>
+            <Modal.Dialog ref={modalRef} className={`${className} modal`}>
                 <Modal.Header closeButton>
-                    <Modal.Title>LOGIN</Modal.Title>
+                    <Modal.Title>TRANSFERÊNCIA</Modal.Title>
                 </Modal.Header>
                 <Form>
                     
                 
-                  <Modal.Body>  
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>E-mail</Form.Label>
-                        <Form.Control type="email" placeholder="Digite o seu e-mail corporativo." />
-                    
-                    </Form.Group>
+                  <Modal.Body>
+                        <Card>
+                            <ListGroup>
+                                Código:
+                                <ListGroupItem variant="primary">9898</ListGroupItem>
+                                Unidade do Leito:
+                                <ListGroupItem variant="primary">98</ListGroupItem>
+                                Setor:
+                                <ListGroupItem variant="primary">Enfermaria</ListGroupItem>
+                                Nome do Paciente:
+                                <ListGroupItem variant="primary">Matheus Guimarães</ListGroupItem>
+                            </ListGroup>
+                        </Card>
 
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Senha</Form.Label>
-                        <Form.Control type="password" placeholder="Digite a sua senha." />
-                    </Form.Group>
+                        <Card style={{marginTop:"20px"}}>  
+                            <Form.Group controlId="formBasicEmail" style={{width:'50%'}}>
+                                <Form.Label>Unidade:</Form.Label>
+                                <Form.Control as="select">
+                                </Form.Control>
+                                <Form.Label>Setor:</Form.Label>
+                                <Form.Control as="select">
+                                </Form.Control>
+                                <Form.Label>Leito:</Form.Label>
+                                <Form.Control as="select">
+                                </Form.Control>
+                            </Form.Group>
+                        </Card>
 
                     </Modal.Body>
+
                     <Modal.Footer>
                      <Button style={{backgroundColor:"#86b2f3", border:"none"}} type="submit">
-                        Login
+                        Transferir
                     </Button>
-                    <Form.Group>
-                        <Link to="/signup">Cadastre-se</Link>
-                    </Form.Group>
+                    
                     </Modal.Footer>
                    
                 </Form>
             </Modal.Dialog>
-        </Page>
+        
     )
 }
 
