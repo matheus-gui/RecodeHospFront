@@ -5,6 +5,7 @@ import SignUp from '../pages/SignUp';
 import Recepcao from '../pages/Recepcao';
 import Internacao from '../pages/Internacao';
 import Admin from '../pages/Admin';
+import Transferencia from '../pages/Transferencia';
 
 const routes = [{
     name: 'Sobre',
@@ -46,6 +47,12 @@ const routes = [{
     name: 'Internacao',
     component: Internacao,
     path: '/internacao',
+    navbar: false,
+},
+{
+    name: 'Transferencia',
+    component: Transferencia,
+    path: '/transferencia',
     navbar: false,
 }
 ];
