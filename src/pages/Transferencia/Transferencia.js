@@ -95,13 +95,6 @@ const Transferencia = () => {
                         <ListGroup.Item action onClick={toggleDropdown}>
                             This one is a button
                         </ListGroup.Item>
-                        <ListGroup.Item action onClick={toggleDropdown}>
-                            This one is a button
-                        </ListGroup.Item>
-                        <ListGroup.Item action onClick={toggleDropdown}>
-                            This one is a button
-                        </ListGroup.Item>
-                        
                     </ListGroup>
                 </Card.Body>
                 <Card.Footer><Button variant="danger" style={{float:"right"}}>Voltar</Button></Card.Footer>
