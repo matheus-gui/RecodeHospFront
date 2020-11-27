@@ -71,15 +71,20 @@ const Transferencia = () => {
                     <Form>
                         <Form.Group controlId="formBasicEmail" style={{width:'50%'}}>
                                 <Form.Label>Unidade:</Form.Label>
-                                <Form.Control as="select"></Form.Control>
-                                {unidade.map((unidade, index) => (<option>
-                                {unidade}   
-                                </option>))}
+                                <Form.Control as="select">
+                                    {unidade.map((unidade, index) => (<option>
+                                    {unidade.nome}   
+                                    </option>))}
+                                    
+                                </Form.Control>
+                                
                                 <Form.Label>Setor:</Form.Label>
-                                <Form.Control as="select"></Form.Control>
-                                {setor.map((unidade, index) => (<option>
-                                {setor}   
-                                </option>))}
+                                <Form.Control as="select">
+                                    {setor.map((unidade, index) => (<option>
+                                    {setor.nome}   
+                                    </option>))}
+                                </Form.Control>
+                                
                                 
                             </Form.Group>
                     </Form>
