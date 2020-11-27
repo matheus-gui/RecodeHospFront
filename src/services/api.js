@@ -1,5 +1,5 @@
 import axios from 'axios';
 
-const api = axios.create({baseUrl: ''});
+const api = axios.create({baseURL: 'https://hospitalrecode.herokuapp.com/'});
 
 export default api;

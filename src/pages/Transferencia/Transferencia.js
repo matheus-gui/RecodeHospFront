@@ -1,8 +1,9 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import Page from '../../components/Page';
 import {ListGroup, Card, Form, Button} from 'react-bootstrap';
 import ModalTransferencia from '../ModalTransferencia'
 import './Transf.css';
+import api from '../../services/api';
 
 const Transferencia = () => {
     const [dropdown, setDropdown] = useState(""); 
@@ -15,7 +16,6 @@ const Transferencia = () => {
     setTimeout(() => {
         document.body.addEventListener("click", closeDropdown);
     });
-    
   }
 
   const closeDropdown = event => {
@@ -27,7 +27,39 @@ const Transferencia = () => {
       document.body.removeEventListener("click", closeDropdown);
     }
   };
-    
+  
+  useEffect(() => {
+    getUnidades();
+  }, []);
+  
+  const [unidade, setUnidade] = useState([]);
+
+  const getUnidades = () => {
+    api.get('/unidade').then((response) => {
+      const { data } = response;
+      setUnidade(data);
+    }).catch((error) => {
+      console.log(error);
+    });
+  };
+
+
+  useEffect(() => {
+    getSetor();
+  }, []);
+
+  const [setor, setSetor] = useState([]);
+
+  const getSetor = () => {
+    api.get('/setor').then((response) => {
+      const { data } = response;
+      setSetor(data);
+      console.log(data)
+    }).catch((error) => {
+      console.log(error);
+    });
+  };
+
     return (
         
 
@@ -39,11 +71,16 @@ const Transferencia = () => {
                     <Form>
                         <Form.Group controlId="formBasicEmail" style={{width:'50%'}}>
                                 <Form.Label>Unidade:</Form.Label>
-                                <Form.Control as="select">
-                                </Form.Control>
+                                <Form.Control as="select"></Form.Control>
+                                {unidade.map((unidade, index) => (<option>
+                                {unidade}   
+                                </option>))}
                                 <Form.Label>Setor:</Form.Label>
-                                <Form.Control as="select">
-                                </Form.Control>
+                                <Form.Control as="select"></Form.Control>
+                                {setor.map((unidade, index) => (<option>
+                                {setor}   
+                                </option>))}
+                                
                             </Form.Group>
                     </Form>
                 </Card.Body>
